@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Hut Jr. - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Items in Your Cart</h2>
+            <div class="cart-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pizza</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be dynamically loaded here -->
+                    </tbody>
+                </table>
+                
+                <div class="cart-summary">
+                    <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+                    <div class="cart-actions">
+                        <button onclick="window.location.href='menu.html'" class="secondary-btn">Add More Pizzas</button>
+                        <button id="clear-cart" class="danger-btn">Clear Cart</button>
+                        <button id="checkout-button" class="primary-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon-Thu: 11am-10pm</p>
+                <p>Fri-Sat: 11am-11pm</p>
+                <p>Sun: 12pm-9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@papahutjr.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Papa Hut Jr. - All Rights Reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

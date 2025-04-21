@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Hut Jr. - Fresh Pizza Delivered</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Papa Hut Jr.</h1>
+        <p class="tagline">Fresh, Hot, and Delicious Pizza - Just for You!</p>
+        <nav>
+            <ul>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        Cart
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Today's Special Offers</h2>
+            <div class="special-deals">
+                <p>🍕 Free Delivery on Orders Over $30</p>
+                <p>🎉 20% Off on Family Size Pizzas</p>
+                <p>🌟 Try Our New Professor's Deep Dish!</p>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2>Our Delicious Pizzas</h2>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                <button class="filter-btn" data-filter="meat">Meat Lovers</button>
+                <button class="filter-btn" data-filter="specialty">Specialty</button>
+            </div>
+            <div id="pizza-list" class="menu-container">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Customize Modal -->
+        <div id="customizeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <img id="modalImage" class="modal-image" src="" alt="Pizza">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <p id="modalDescription" class="modal-description"></p>
+                <p id="modalPrice" class="modal-price"></p>
+                <div class="modal-buttons">
+                    <button id="customize-pizza-btn" class="customize-pizza-btn">Customize Pizza</button>
+                    <button onclick="addToCartFromModal()" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon-Thu: 11am-10pm</p>
+                <p>Fri-Sat: 11am-11pm</p>
+                <p>Sun: 12pm-9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@papahutjr.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Papa Hut Jr. - All Rights Reserved.</p>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>

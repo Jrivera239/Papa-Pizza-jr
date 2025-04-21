@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Customize Your Pizza - Papa Hut Jr.</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Customize Your Pizza</h1>
+		<nav>
+			<ul>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="cart.html">Cart</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="customize-container">
+		<div class="pizza-info">
+			<h2 id="pizza-name"></h2>
+			<p>Base Price: $<span id="base-price"></span></p>
+			<p>Total Price: $<span id="total-price"></span></p>
+		</div>
+
+		<form id="toppings-form" class="toppings-form">
+			<h3>Select Your Toppings</h3>
+			<div class="toppings-list">
+				<label>
+					<input type="checkbox" class="topping" value="1.50"> Extra Cheese ($1.50)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.00"> Pepperoni ($1.00)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.00"> Mushrooms ($1.00)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.00"> Bell Peppers ($1.00)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.00"> Onions ($1.00)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.50"> Italian Sausage ($1.50)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="2.00"> Grilled Chicken ($2.00)
+				</label>
+				<label>
+					<input type="checkbox" class="topping" value="1.50"> Bacon ($1.50)
+				</label>
+			</div>
+
+			<button type="button" id="add-to-cart" class="primary-btn">Add to Cart</button>
+		</form>
+	</main>
+
+	<footer>
+		<div class="footer-content">
+			<div class="footer-section">
+				<h3>Contact</h3>
+				<p>Phone: (555) 123-4567</p>
+				<p>Email: info@papahutjr.com</p>
+			</div>
+		</div>
+		<p class="copyright">&copy; 2025 Papa Hut Jr. - All Rights Reserved.</p>
+	</footer>
+
+	<script src="customize.js"></script>
+</body>
+</html>
