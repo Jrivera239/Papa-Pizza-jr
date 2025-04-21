@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const totalAmount = parseFloat(localStorage.getItem("cartTotal")) || 0;
+        const selectedOrderMethod = document.querySelector('input[name="delivery-type"]:checked').value;
 
         const order = {
             id: Date.now(),
@@ -67,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
             totalAmount: totalAmount,
             orderDate: new Date().toISOString(),
             paymentMethod: paymentMethodSelect.value,
-            deliveryType: document.querySelector('input[name="delivery-type"]:checked').value,
-            deliveryAddress: document.querySelector('input[name="delivery-type"]:checked').value === 'delivery' ? {
+            method: selectedOrderMethod, // ✅ Used for order tracking
+            deliveryAddress: selectedOrderMethod === 'delivery' ? {
                 street: document.getElementById("address")?.value,
                 city: document.getElementById("city")?.value,
                 zip: document.getElementById("zip")?.value
@@ -83,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.removeItem("cartTotal");
 
         alert("Order placed successfully! Your order number is: " + order.id);
-        window.location.href = "confirmation.html";
+        window.location.href = "confirmation.html"; // your order status page
     });
 
-    // Delivery UI
+    // Delivery UI toggle
     deliveryTypeInputs.forEach(input => {
         input.addEventListener('change', (e) => {
             deliveryAddressDiv.classList.toggle('hidden', e.target.value !== 'delivery');
